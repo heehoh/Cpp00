@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:10:31 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/02 20:58:11 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/15 11:38:30 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,12 @@ void PhoneBook::showDetailInfo(void) {
       return;
     else if (isIndex(input)) {
       idx = input[0] - '0' - 1;
+      if (idx >= _contact_idx) {
+        std::cout << idx + 1
+                  << "번 index는 아직 저장되지 않았습니다. 다시 입력해주세요!"
+                  << std::endl;
+        continue;
+      }
       std::cout << "first name: " << _contact[idx].getFirstName() << "\n"
                 << "last name: " << _contact[idx].getLastName() << "\n"
                 << "nickname: " << _contact[idx].getNickname() << "\n"
@@ -115,7 +121,7 @@ void PhoneBook::showDetailInfo(void) {
                 << std::endl;
       return;
     }
-    std::cout << "잘못된 입력입니다. 다시 입력해주세요" << std::endl;
+    std::cout << "잘못된 입력입니다. 다시 입력해주세요!" << std::endl;
   };
 }
 

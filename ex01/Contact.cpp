@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:53:12 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/02 10:50:55 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/15 11:29:14 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 #include <iostream>
 
-Contact::Contact() {}
+Contact::Contact()
+    : _first_name(""),
+      _last_name(""),
+      _nickname(""),
+      _phone_number(""),
+      _darkest_secret("") {}
 
 Contact::Contact(std::string first_name, std::string last_name,
                  std::string nickname, std::string phone_number,
