@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = a.out
 SRCS = megaphone.cpp
 
 OBJS = $(SRCS:.cpp=.o)
