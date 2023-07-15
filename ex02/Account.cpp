@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 10:43:13 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/15 13:32:10 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/15 15:52:25 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 #include <iomanip>
 #include <iostream>
+
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
 
 int Account::getNbAccounts(void) { return _nbAccounts; }
 
@@ -52,6 +57,7 @@ void Account::makeDeposit(int deposit) {
   _amount += deposit;
   _totalAmount += deposit;
   ++_nbDeposits;
+  ++_totalNbDeposits;
   std::cout << "[19920104_091532] "
             << "index:" << _accountIndex << ";p_amount:" << p_amount
             << ";deposit:" << deposit << ";amount:" << _amount
@@ -69,6 +75,7 @@ bool Account::makeWithdrawal(int withdrawal) {
   _amount -= withdrawal;
   _totalAmount -= withdrawal;
   ++_nbWithdrawals;
+  ++_totalNbWithdrawals;
   std::cout << "[19920104_091532] "
             << "index:" << _accountIndex << ";p_amount:" << p_amount
             << ";withdrawal:" << withdrawal << ";amount:" << _amount
@@ -79,7 +86,7 @@ bool Account::makeWithdrawal(int withdrawal) {
 int Account::checkAmount(void) const { return _amount; }
 
 void Account::displayStatus(void) const {
-  std::cout << "[ "
+  std::cout << "[19920104_091532] "
             << "index:" << _accountIndex << ";amount:" << _amount
             << ";deposits:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals
             << std::endl;
