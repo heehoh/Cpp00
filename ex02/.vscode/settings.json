@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "memory": "cpp",
+    "iterator": "cpp",
+    "__cxx_version": "cpp",
+    "functional": "cpp",
+    "iosfwd": "cpp"
+  }
+}
