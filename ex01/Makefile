@@ -1,4 +1,4 @@
-NAME = PhoneBook
+NAME = a.out
 SRCS = main.cpp PhoneBook.cpp Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
