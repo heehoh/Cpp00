@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 09:30:35 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/23 23:11:38 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/31 16:31:00 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 class Contact {
  public:
   Contact();
-  Contact(std::string first_name, std::string last_name, std::string nickname,
-          std::string phone_number, std::string darkest_secret);
   std::string getFirstName(void) const;
   std::string getLastName(void) const;
   std::string getNickname(void) const;

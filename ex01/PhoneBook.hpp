@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:11:11 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/02 10:42:32 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/31 19:45:46 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class PhoneBook {
  private:
   Contact _contact[8];
   int _contact_idx;
+  static const int _CONTACT_MAX = 8;
 };
 
 #endif

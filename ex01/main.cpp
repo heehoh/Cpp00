@@ -6,7 +6,7 @@
 /*   By: hujeong <hujeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:20:57 by hujeong           #+#    #+#             */
-/*   Updated: 2023/07/10 18:03:05 by hujeong          ###   ########.fr       */
+/*   Updated: 2023/07/31 20:05:58 by hujeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void showCommand(void) {
             << "\n\n"
             << "----------------------------------------------------"
             << "\n"
-            << "ADD(정보 저장)"
-            << " SEARCH(정보 검색)"
-            << " EXIT(프로그램 종료)" << std::endl;
+            << "ADD(정보 저장) "
+            << "SEARCH(정보 검색) "
+            << "EXIT(프로그램 종료)" << std::endl;
 }
 
 int main(void) {
@@ -37,17 +37,17 @@ int main(void) {
       std::clearerr(stdin);
       std::cin.clear();
       std::cout << "\n";
-      std::cout << "잘못된 명령어 입니다. 다시 입력해주세요" << std::endl;
     } else if (input == "ADD") {
       phonebook.add();
       showCommand();
+      continue;
     } else if (input == "SEARCH") {
       phonebook.search();
       showCommand();
+      continue;
     } else if (input == "EXIT")
       return 0;
-    else
-      std::cout << "잘못된 명령어 입니다. 다시 입력해주세요" << std::endl;
+    std::cout << "잘못된 명령어 입니다. 다시 입력해주세요" << std::endl;
   }
   return 0;
 }
